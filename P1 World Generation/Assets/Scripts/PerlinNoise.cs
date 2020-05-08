@@ -12,34 +12,33 @@ public class PerlinNoise : MonoBehaviour
     public float offsetX = 100;
     public float offsetY = 100;
 
-    [SerializeField]
-    private List<ColorHeight> colorHeights;
+    public float bottom = 0;
+
+    public List<TileHeight> tileHeights;
+
+    private GameObject child;
 
     private void Start()
     {
-        Renderer renderer = GetComponent<Renderer>();
-        renderer.material.mainTexture = GenerateTexture();
+        child = new GameObject("Tiles");
+        child.transform.SetParent(transform);
+
+        GenerateTexture();
     }
 
-    private Texture2D GenerateTexture ()
+    private void GenerateTexture ()
     {
-        Texture2D texture = new Texture2D(width, height);
-
         //Generate a perlin noise map for texture
         for (int x = 0; x < width; x++)
         {
             for (int y = 0; y < height; y++)
             {
-                Color color = CalculateColor(x, y);
-                texture.SetPixel(x, y, color);
+                CalculateColor(x, y);
             }
         }
-
-        texture.Apply();
-        return texture;
     }
 
-    private Color CalculateColor(int x, int y)
+    private void CalculateColor(int x, int y)
     {
         //Gets basic coordinates
         float xCoord = (float)x / width * scale + offsetX;
@@ -54,14 +53,17 @@ public class PerlinNoise : MonoBehaviour
         sample -= Evaluate(Mathf.Max(Mathf.Abs(ofCenterX), Mathf.Abs(ofCenterY)));
 
         //HeightMap mapping
-        foreach (ColorHeight colorHeight in colorHeights)
+        float lastHeight = bottom;
+        foreach (TileHeight tileHeight in tileHeights)
         {
-            if (sample < colorHeight.height)
+            if (sample < tileHeight.height && sample > lastHeight)
             {
-                return colorHeight.color;
+                GameObject obj = Instantiate(tileHeight.tile);
+                obj.transform.position = new Vector2(x, y);
+                obj.transform.SetParent(child.transform);
+                lastHeight = sample;
             }
         }
-        return new Color();
     }
 
     private float Evaluate(float value)
@@ -74,8 +76,8 @@ public class PerlinNoise : MonoBehaviour
 }
 
 [System.Serializable]
-public class ColorHeight
+public class TileHeight
 {
-    public Color color;
+    public GameObject tile;
     public float height;
 }
