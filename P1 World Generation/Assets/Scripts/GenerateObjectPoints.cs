@@ -20,8 +20,8 @@ public class GenerateObjectPoints : MonoBehaviour
 
         tiles = GameObject.FindGameObjectsWithTag("Tile");
 
-        int height = GetComponent<PerlinNoise>().height;
-        int width = GetComponent<PerlinNoise>().width;
+        int height = GameObject.Find("World").GetComponent<PerlinNoise>().height;
+        int width = GameObject.Find("World").GetComponent<PerlinNoise>().width;
 
         while (pointCount > 0 && failSave > 0)
         {

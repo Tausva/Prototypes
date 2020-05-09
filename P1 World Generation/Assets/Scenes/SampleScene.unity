@@ -204,6 +204,72 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1236571857
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1236571858}
+  - component: {fileID: 1236571860}
+  - component: {fileID: 1236571859}
+  m_Layer: 0
+  m_Name: MountainObjects
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1236571858
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1236571857}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1575376829}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1236571859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1236571857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c0d0a605d944fa4b9a2a08bd31d1269, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectsToSpawn:
+  - prefab: {fileID: 6750460212522285817, guid: 85c810ab2d065b64280d43fee95254b6,
+      type: 3}
+    chance: 50
+  - prefab: {fileID: 352871223528141592, guid: 76977dc301d33f74d9261d83363e9b46, type: 3}
+    chance: 10
+--- !u!114 &1236571860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1236571857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fb50e4a751e86d43af29ed1421a3769, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointCount: 200
+  landToSpawn:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!1 &1575376827
 GameObject:
   m_ObjectHideFlags: 0
@@ -216,6 +282,7 @@ GameObject:
   - component: {fileID: 1575376828}
   - component: {fileID: 1575376830}
   - component: {fileID: 1575376831}
+  - component: {fileID: 1575376832}
   m_Layer: 0
   m_Name: World
   m_TagString: Untagged
@@ -238,13 +305,17 @@ MonoBehaviour:
   width: 128
   height: 128
   scale: 10
-  offsetX: 0
-  offsetY: 0
-  bottom: 0
+  offsetX: 120
+  offsetY: 1285
+  bottom: -1
   tileHeights:
-  - tile: {fileID: 181395410918060574, guid: 62fdba020bfa7e04cbb9e90b8ca42621, type: 3}
-    height: 0.4
+  - tile: {fileID: 1373964833833006479, guid: 62fdba020bfa7e04cbb9e90b8ca42621, type: 3}
+    height: 0.3
   - tile: {fileID: 1474323804812708150, guid: 90792fdcb4f693244ade0995dc03f7d3, type: 3}
+    height: 0.6
+  - tile: {fileID: 6341589693926413669, guid: abb225eed767caa4180609b970758bc4, type: 3}
+    height: 0.8
+  - tile: {fileID: 8179771476634981968, guid: 1fa66e4936fd6204e83b3d72b4053a1f, type: 3}
     height: 1
 --- !u!4 &1575376829
 Transform:
@@ -256,7 +327,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1236571858}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -272,7 +344,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fb50e4a751e86d43af29ed1421a3769, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointCount: 500
+  pointCount: 200
   landToSpawn:
     serializedVersion: 2
     m_Bits: 256
@@ -291,4 +363,33 @@ MonoBehaviour:
   objectsToSpawn:
   - prefab: {fileID: 1120164531848894100, guid: d3d258d584afdd84db490b53d96ce853,
       type: 3}
-    chance: 0
+    chance: 3
+  - prefab: {fileID: 4764926227111275559, guid: 4824324124c157c46939b3933a6cb655,
+      type: 3}
+    chance: 5
+  - prefab: {fileID: 8933132425187976740, guid: 104d41dbd10dcba4a826ed6047b598aa,
+      type: 3}
+    chance: 2
+  - prefab: {fileID: 7967348045915281869, guid: b9d43664a7169074dbfd456dac2bda7d,
+      type: 3}
+    chance: 8
+--- !u!114 &1575376832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1575376827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1440873bb0394744284f5efc8fa46fdd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bottom: {fileID: 21300000, guid: d2fffa70c05d38548a0c07e9ba69bd50, type: 3}
+  left: {fileID: 21300000, guid: 016cecd9e68110a4280c3ce3d61f767b, type: 3}
+  top: {fileID: 21300000, guid: bcce88684df9db041a158ecf5bb9f87d, type: 3}
+  right: {fileID: 21300000, guid: ca3432341e1f3b44282ae9e68a4cdf02, type: 3}
+  bottomLeft: {fileID: 21300000, guid: 23fb9eb46ff443149a3412fe726675c9, type: 3}
+  bottomRight: {fileID: 21300000, guid: 4d250dfc8e3d39a4196270d6e7a9e385, type: 3}
+  topLeft: {fileID: 21300000, guid: 2bd4338f447307f40853e1a2791b717d, type: 3}
+  topRgiht: {fileID: 21300000, guid: 42e31f6100f2f504fae1def809175f8c, type: 3}
