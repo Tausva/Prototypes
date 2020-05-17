@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3428363069216766356
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5657051613167509580}
+  - component: {fileID: 8517878107112924489}
+  m_Layer: 0
+  m_Name: Aiskinasi kur yra
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5657051613167509580
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3428363069216766356}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8517878107112924489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3428363069216766356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4869fadcf66c19549a88317422b878eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lines:
+  - characterName: "Kold\u016Bnas"
+    textColor: {r: 1, g: 1, b: 1, a: 1}
+    characterSprite: {fileID: 21300000, guid: a2dde41cb987a9541ae9407ad8187e7b, type: 3}
+    dialogueLines:
+    - '*Apsidairo*'
+    - "Na.... Avokadai, gal tu \u017Einai kur mes randam\u0117s? Nieko nepamenu"
+  - characterName: Avokadas
+    textColor: {r: 0.87843144, g: 0.854902, b: 0.09411766, a: 1}
+    characterSprite: {fileID: 21300000, guid: e4076871ba41550429fd577394d12899, type: 3}
+    dialogueLines:
+    - Mes?
+    - "Mes juk esame g\u016Bd\u017Eioje Rusijos girioje."
+    - Tiksliau, Tsenstral'nosibirsko nacionaliniame draustinyje
+  - characterName: "Kold\u016Bnas"
+    textColor: {r: 1, g: 1, b: 1, a: 1}
+    characterSprite: {fileID: 21300000, guid: a2dde41cb987a9541ae9407ad8187e7b, type: 3}
+    dialogueLines:
+    - '*Sliurp sliurp sliurp*'
+  - characterName: Avokadas
+    textColor: {r: 0.8773585, g: 0.85364765, b: 0.09518514, a: 1}
+    characterSprite: {fileID: 21300000, guid: e4076871ba41550429fd577394d12899, type: 3}
+    dialogueLines:
+    - "Ai! Kold\u016Bnai"
+    - "Baik lakti vanden\u012F i\u0161 mano siklin\u0117s"
+  - characterName: "Kold\u016Bnas"
+    textColor: {r: 1, g: 1, b: 1, a: 1}
+    characterSprite: {fileID: 21300000, guid: a2dde41cb987a9541ae9407ad8187e7b, type: 3}
+    dialogueLines:
+    - Miaaaaau
+    - "Atsipra\u0161au, bet jau labai skanus vandenukas"
+    - . . .
+    - . . .
+    - "Pala.... K\u0105 a\u0161 veikiu mi\u0161ke viduryje Rusijos???"
+  textSpeed: 0.025

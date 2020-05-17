@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2695023869552490714
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4806628647901020290}
+  - component: {fileID: 8467541436161720144}
+  m_Layer: 0
+  m_Name: Koldunas atsibunda
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4806628647901020290
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2695023869552490714}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8467541436161720144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2695023869552490714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4869fadcf66c19549a88317422b878eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lines:
+  - characterName: ???
+    textColor: {r: 1, g: 1, b: 1, a: 1}
+    characterSprite: {fileID: 21300000, guid: 1a4e81a42f84ee248a91fb8bd1b4c5ac, type: 3}
+    dialogueLines:
+    - '?'
+    - ???
+    - "Kur a\u0161?"
+  - characterName: 
+    textColor: {r: 0, g: 0, b: 0, a: 1}
+    characterSprite: {fileID: 21300000, guid: 1a4e81a42f84ee248a91fb8bd1b4c5ac, type: 3}
+    dialogueLines:
+    - '*pump*'
+  - characterName: ???
+    textColor: {r: 1, g: 1, b: 1, a: 1}
+    characterSprite: {fileID: 21300000, guid: 1a4e81a42f84ee248a91fb8bd1b4c5ac, type: 3}
+    dialogueLines:
+    - Aaaaaaa!
+    - "Pala... Ar \u010Dia lapas?  Med\u017Eio lapas?"
+    - "Uoj.... A\u0161 mi\u0161ke.... K\u0105 a\u0161 \u010Dia veikiu?"
+    - Miaaaauuu!
+    - "Miau? Miau! O kas a\u0161 toks?"
+  - characterName: "Kold\u016Bnas"
+    textColor: {r: 1, g: 1, b: 1, a: 1}
+    characterSprite: {fileID: 21300000, guid: a2dde41cb987a9541ae9407ad8187e7b, type: 3}
+    dialogueLines:
+    - "Ai, a\u0161 gi katinas! Kaip a\u0161 sugeb\u0117jau tai pamir\u0161ti?"
+    - "Pala. o k\u0105 a\u0161 visgi veikiu \u0161itame tankumyne?"
+    - Miauu!
+  textSpeed: 0.025

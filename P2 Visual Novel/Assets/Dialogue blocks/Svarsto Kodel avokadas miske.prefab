@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8946899389892523253
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4732788274468374958}
+  - component: {fileID: 785093488252911531}
+  m_Layer: 0
+  m_Name: Svarsto Kodel avokadas miske
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4732788274468374958
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8946899389892523253}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &785093488252911531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8946899389892523253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4869fadcf66c19549a88317422b878eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lines:
+  - characterName: Avokadas
+    textColor: {r: 0.8784314, g: 0.85490197, b: 0.09803922, a: 1}
+    characterSprite: {fileID: 21300000, guid: e4076871ba41550429fd577394d12899, type: 3}
+    dialogueLines:
+    - "Gal pasivaik\u0161ioti i\u0161\u0117jai ir paklydai truputuk\u0105?"
+  - characterName: "Kold\u016Bnas"
+    textColor: {r: 1, g: 1, b: 1, a: 1}
+    characterSprite: {fileID: 21300000, guid: a2dde41cb987a9541ae9407ad8187e7b, type: 3}
+    dialogueLines:
+    - "I\u0161 pat Buto? na \u017Einoma, \u010Dia katin\u0173 matavimais kaip iki
+      m\u0117nulio ir atgal"
+    - "Pala, o k\u0105 tu \u010Dia veiki? Tu juk koju net neturi"
+    - "Saky\u010Diau at\u0117jai pa\u0161lam\u0117ti, bet juk j\u016Bs avokadai pietuose
+      gyvenat"
+  - characterName: Avokadas
+    textColor: {r: 0.8784314, g: 0.85490197, b: 0.09803922, a: 1}
+    characterSprite: {fileID: 21300000, guid: e4076871ba41550429fd577394d12899, type: 3}
+    dialogueLines:
+    - Taip tikra tiesa, pietuose
+    - "Na bet matai, reikalas tas, jog a\u0161 esu tik tavo vaizduot\u0117s vaisius"
+    - '*Pradeda nykti akyse*'
+  - characterName: "Kold\u016Bnas"
+    textColor: {r: 1, g: 1, b: 1, a: 1}
+    characterSprite: {fileID: 21300000, guid: a2dde41cb987a9541ae9407ad8187e7b, type: 3}
+    dialogueLines:
+    - Avokadai!
+    - "Kas \u010Dia vyksta? Kur tu dingsti?"
+    - "K\u0105 turi omenyjo jog tik vaizduot\u0117s vaisius? Tu gi jau seniai nebe
+      vaisius"
+    - Avokadai! Miau!
+  textSpeed: 0.025
